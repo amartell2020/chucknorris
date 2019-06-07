@@ -4,9 +4,6 @@ if ARGV.length == 2
   Chuckjokes.replace_name(ARGV[0], ARGV[1])
 elsif ARGV[0] == 'random'
   Chuckjokes.random
-elsif ARGV[0] == '11'
-  puts "Chuck Norris killed this joke"
-  puts "ID 11"
 elsif ARGV[0].to_i > 0
   Chuckjokes.get_joke_by_id(ARGV[0].to_i)
 else

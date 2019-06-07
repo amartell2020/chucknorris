@@ -6,8 +6,12 @@ class Chuckjokes
   end
   def self.get_joke_by_id(id)
     id_joke = ChuckNorris::JokeFinder.find_joke(id)
-    puts id_joke.joke
-    puts "ID #{id_joke.id}"
+    if id_joke.id == 'id'
+      puts "Chuck Norris killed this joke"
+    else
+      puts id_joke.joke
+      puts "ID #{id_joke.id}"
+    end
   end
   def self.replace_name(nam1, nam2)
       change = ChuckNorris::JokeFinder.get_joke(first_name: nam1, last_name: nam2 )
