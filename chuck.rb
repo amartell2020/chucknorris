@@ -2,7 +2,7 @@ require "chuck_norris"
 
 class Chuckjokes
   def self.help
-    puts "Enter what you would like to do. For a random joke enter 'ruby app.rb random', for an id, enter 'ruby app.rb (enter # here)', to replace a name enter 'ruby app.rb (fist name, last name)'"
+    puts "Enter what you would like to do\nFor a random joke enter 'ruby app.rb random'\nFor an id, enter 'ruby app.rb (enter # here)'\nTo replace a name enter 'ruby app.rb (fist name, last name)'"
   end
   def self.get_joke_by_id(id)
     id_joke = ChuckNorris::JokeFinder.find_joke(id)
@@ -14,7 +14,7 @@ class Chuckjokes
     end
   end
   def self.replace_name(nam1, nam2)
-      change = ChuckNorris::JokeFinder.get_joke(first_name: nam1, last_name: nam2 )
+      change = ChuckNorris::JokeFinder.get_joke(first_name: nam1.downcase.capitalize, last_name: nam2.downcase.capitalize)
       puts change.joke
       puts "ID #{change.id}"
   end
