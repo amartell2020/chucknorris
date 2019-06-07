@@ -14,7 +14,7 @@ class Chuckjokes
     end
   end
   def self.replace_name(nam1, nam2)
-      change = ChuckNorris::JokeFinder.get_joke(first_name: nam1.downcase.capitalize, last_name: nam2.downcase.capitalize)
+      change = ChuckNorris::JokeFinder.get_joke(first_name: nam1, last_name: nam2)
       puts change.joke
       puts "ID #{change.id}"
   end
